@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.js": "/sparkling-tamsui/static/js/main.3a1567e7.chunk.js",
+    "main.js.map": "/sparkling-tamsui/static/js/main.3a1567e7.chunk.js.map",
+    "runtime-main.js": "/sparkling-tamsui/static/js/runtime-main.2c81c0a5.js",
+    "runtime-main.js.map": "/sparkling-tamsui/static/js/runtime-main.2c81c0a5.js.map",
+    "static/js/2.a2b1402a.chunk.js": "/sparkling-tamsui/static/js/2.a2b1402a.chunk.js",
+    "static/js/2.a2b1402a.chunk.js.map": "/sparkling-tamsui/static/js/2.a2b1402a.chunk.js.map",
+    "static/js/3.198ab2a5.chunk.js": "/sparkling-tamsui/static/js/3.198ab2a5.chunk.js",
+    "static/js/3.198ab2a5.chunk.js.map": "/sparkling-tamsui/static/js/3.198ab2a5.chunk.js.map",
+    "index.html": "/sparkling-tamsui/index.html",
+    "static/js/2.a2b1402a.chunk.js.LICENSE.txt": "/sparkling-tamsui/static/js/2.a2b1402a.chunk.js.LICENSE.txt",
+    "static/media/art01.19a775fb.png": "/sparkling-tamsui/static/media/art01.19a775fb.png",
+    "static/media/art02.46152d67.png": "/sparkling-tamsui/static/media/art02.46152d67.png",
+    "static/media/art03.dc8fc896.png": "/sparkling-tamsui/static/media/art03.dc8fc896.png",
+    "static/media/art04.dc4ae387.png": "/sparkling-tamsui/static/media/art04.dc4ae387.png",
+    "static/media/art05.23aeeac5.png": "/sparkling-tamsui/static/media/art05.23aeeac5.png",
+    "static/media/decorate_bottom_left.db9578bb.png": "/sparkling-tamsui/static/media/decorate_bottom_left.db9578bb.png",
+    "static/media/decorate_mid.ebeafa94.png": "/sparkling-tamsui/static/media/decorate_mid.ebeafa94.png",
+    "static/media/decorate_top_right.c0887696.png": "/sparkling-tamsui/static/media/decorate_top_right.c0887696.png",
+    "static/media/fire01.9d17294c.jpg": "/sparkling-tamsui/static/media/fire01.9d17294c.jpg",
+    "static/media/kv.c8a810d3.svg": "/sparkling-tamsui/static/media/kv.c8a810d3.svg",
+    "static/media/logotype.2c181363.svg": "/sparkling-tamsui/static/media/logotype.2c181363.svg",
+    "static/media/time.922be533.svg": "/sparkling-tamsui/static/media/time.922be533.svg",
+    "static/media/time01.6e49f64f.png": "/sparkling-tamsui/static/media/time01.6e49f64f.png",
+    "static/media/time02.5f789d17.png": "/sparkling-tamsui/static/media/time02.5f789d17.png",
+    "static/media/time03.6f2076c5.png": "/sparkling-tamsui/static/media/time03.6f2076c5.png",
+    "static/media/time04.563b5b61.png": "/sparkling-tamsui/static/media/time04.563b5b61.png",
+    "static/media/title_firework.9e728dfa.svg": "/sparkling-tamsui/static/media/title_firework.9e728dfa.svg",
+    "static/media/title_store.0d016170.svg": "/sparkling-tamsui/static/media/title_store.0d016170.svg",
+    "static/media/title_time.97361c9f.svg": "/sparkling-tamsui/static/media/title_time.97361c9f.svg",
+    "static/media/title_wave.bf632dc9.svg": "/sparkling-tamsui/static/media/title_wave.bf632dc9.svg",
+    "static/media/title_wave_white.5973ad7c.svg": "/sparkling-tamsui/static/media/title_wave_white.5973ad7c.svg",
+    "static/media/wave_map.1629c979.svg": "/sparkling-tamsui/static/media/wave_map.1629c979.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2c81c0a5.js",
+    "static/js/2.a2b1402a.chunk.js",
+    "static/js/main.3a1567e7.chunk.js"
+  ]
+}
