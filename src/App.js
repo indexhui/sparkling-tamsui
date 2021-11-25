@@ -1,40 +1,54 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import { ChakraProvider } from '@chakra-ui/react';
+import theme from './theme/theme';
+
+import * as Scroll from 'react-scroll';
+import { Element, animateScroll as scroll } from 'react-scroll';
+
+import { Box } from '@chakra-ui/react';
+
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Intro from './components/Intro';
+import Time from './components/Time';
+import Wave from './components/Wave';
+import Firework from './components/Firework';
+import Store from './components/Store';
+import Location from './components/Location';
+import MainFooter from './components/MainFooter';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
+      <Navbar />
+      <Hero />
+      <Intro />
+      <Box w="100%" overflow="hidden">
+        <Element name="time" id="time">
+          <Time />
+        </Element>
       </Box>
+      <Box w="100%" overflow="hidden">
+        <Element name="wave" id="wave">
+          <Wave />
+        </Element>
+      </Box>
+      <Box>
+        <Element name="firework" id="firework">
+          <Firework />
+        </Element>
+      </Box>
+      <Box>
+        <Element name="store" id="store">
+          <Store />
+        </Element>
+      </Box>
+      <Box>
+        <Element name="location" id="location">
+          <Location />
+        </Element>
+      </Box>
+      <MainFooter />
     </ChakraProvider>
   );
 }
