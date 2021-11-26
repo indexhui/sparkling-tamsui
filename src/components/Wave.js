@@ -4,10 +4,25 @@ import {
   HStack,
   Image,
   Box,
+  Divider,
   Avatar,
   Text,
   Heading,
+  Grid,
+  GridItem,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+  Link,
 } from '@chakra-ui/react';
+
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import titleWave from '../assets/images/title_wave.svg';
 
@@ -19,6 +34,13 @@ import art02 from '../assets/images/art02.png';
 import art03 from '../assets/images/art03.png';
 import art04 from '../assets/images/art04.png';
 import art05 from '../assets/images/art05.png';
+
+import event01 from '../assets/images/event01.png';
+import event02 from '../assets/images/event02.png';
+import event03 from '../assets/images/event03.png';
+import event04 from '../assets/images/event04.png';
+import event05 from '../assets/images/event05.png';
+import event06 from '../assets/images/event06.png';
 
 const waveArt = [
   {
@@ -115,6 +137,8 @@ function Wave() {
             </Flex>
           </Flex>
           <WaveArt />
+          <Divider borderColor="gray.400" />
+          <WaveWEvents />
         </VStack>
       </Flex>
     </Flex>
@@ -183,5 +207,268 @@ const WaveArt = () => {
         </Flex>
       ))}
     </VStack>
+  );
+};
+
+const WaveWEvents = () => {
+  return (
+    <Grid
+      templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }}
+      gap={6}
+    >
+      <WaveEvent01 />
+      <WaveEvent02 />
+      <WaveEvent03 />
+    </Grid>
+  );
+};
+
+const WaveEvent01 = () => {
+  return (
+    <GridItem
+      w="100%"
+      direction="column"
+      h="100%"
+      border="1px solid  #f0f0f0"
+      borderBottomLeftRadius="6px"
+      borderBottomRightRadius="6px"
+    >
+      <Image src={event01} />
+      <Box
+        border="1px solid #f0f0f0"
+        p="12px"
+        borderBottomLeftRadius="6px"
+        borderBottomRightRadius="6px"
+      >
+        <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="6px">
+          波響— AudioVisual數位音像表演
+        </Text>
+        <VStack
+          pt="2px"
+          align="flex-start"
+          spacing="0"
+          fontSize="sm"
+          color="#4F4F4F"
+        >
+          <Text color="#656565">12/4(六) 17:30-20:00</Text>
+          <Text>12/5(日) 17:00-19:00</Text>
+          <Text textAlign="right">淡水海關碼頭 C棟倉庫</Text>
+        </VStack>
+
+        <Flex w="100%" mt="12px">
+          <WaveEvent01Schedule />
+          <WaveEvent01Info />
+        </Flex>
+      </Box>
+    </GridItem>
+  );
+};
+
+const WaveEvent01Schedule = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Button
+        size="sm"
+        w="40%"
+        bg="white"
+        border="1px solid #4f4f4f"
+        borderRadius="0"
+        onClick={onOpen}
+      >
+        活動簡介
+      </Button>
+      <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader bg="brand.500" color="white">
+            活動簡介
+          </ModalHeader>
+          <ModalCloseButton color="white" />
+          <ModalBody bg="brand.500" color="white">
+            古蹟DVJ
+            Show動感節奏表演，創造出屬於淡水特色的美好視覺與聽覺藝術饗宴，藉此帶給民眾震撼炫目的全新體驗，以及認識不同於以往的淡水古蹟形象。
+          </ModalBody>
+
+          <ModalFooter bg="brand.500" color="white">
+            <Button
+              colorScheme="white"
+              mr={3}
+              onClick={onClose}
+              borderRadius="0"
+            >
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
+
+const WaveEvent01Info = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Button
+        size="sm"
+        flex="1"
+        bg="#495460"
+        color="white"
+        borderRadius="0"
+        colorScheme="black"
+        onClick={onOpen}
+      >
+        詳細資訊和報名
+      </Button>
+      <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader bg="brand.500" color="white">
+            活動簡介
+          </ModalHeader>
+          <ModalCloseButton color="white" />
+          <ModalBody bg="brand.500" color="white">
+            <Text>12/4(六)17:30-20:00</Text>
+            <Text>17:30-18:30 黃偉軒✕晟SHENG</Text>
+            <Text>18:30-19:00 洪梓倪✕___cssss___</Text>
+            <Text>19:00-19:30 都普勒浪潮✕林立翔</Text>
+            <Text>19:30-20:00 HH</Text>
+            <Text>12/4(六)17:30-20:00</Text>
+            <Divider my="5px" />
+            <Text>12/5(日)17:00-19:00</Text>
+            <Text>18:00-18:30 黃偉</Text>
+            <Text>18:30-19:00 王連晟</Text>
+            <Text>19:00-19:30 黃偉軒✕晟SHENG</Text>
+            <Text>19:30-20:00 都普勒浪潮✕林立翔 0</Text>
+            <Divider my="5px" />
+            <Text>
+              「波響—AudioVisual數位音像表演」需事先報名，詳細報名資訊及當日線上直播請參考
+            </Text>
+            <Link
+              color="cyan.600"
+              href="https://www.facebook.com/events/238972408749093/"
+              target="_blank"
+            >
+              新北市立淡水古蹟博物館官網 <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ModalBody>
+
+          <ModalFooter bg="brand.500" color="white">
+            <Button
+              colorScheme="white"
+              mr={3}
+              onClick={onClose}
+              borderRadius="0"
+            >
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
+
+const WaveEvent02 = () => {
+  return (
+    <Flex
+      w="100%"
+      direction="column"
+      border="1px solid  #f0f0f0"
+      borderBottomLeftRadius="6px"
+      borderBottomRightRadius="6px"
+    >
+      <Image src={event02} />
+      <Flex flex="1" p="12px" direction="column" justify="space-between">
+        <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="6px">
+          淡水絕美之境—淡水山河古蹟沉浸式劇場
+        </Text>
+        <VStack
+          pt="2px"
+          pl="6px"
+          align="flex-start"
+          spacing="0"
+          fontSize="sm"
+          color="#4F4F4F"
+        >
+          <Text color="#656565">12/4(六) 10:00-19:00</Text>
+          <Text>淡水海關碼頭 B棟倉庫</Text>
+        </VStack>
+        <Flex w="100%" mt="12px">
+          <Button
+            size="sm"
+            w="40%"
+            bg="white"
+            border="1px solid #4f4f4f"
+            borderRadius="0"
+          >
+            節目單
+          </Button>
+          <Button
+            size="sm"
+            flex="1"
+            bg="#495460"
+            color="white"
+            borderRadius="0"
+            colorScheme="black"
+          >
+            詳細資訊和報名
+          </Button>
+        </Flex>
+      </Flex>
+    </Flex>
+  );
+};
+
+const WaveEvent03 = () => {
+  return (
+    <Flex
+      w="100%"
+      direction="column"
+      border="1px solid  #f0f0f0"
+      borderBottomLeftRadius="6px"
+      borderBottomRightRadius="6px"
+    >
+      <Image src={event03} />
+      <Flex flex="1" p="12px" direction="column" justify="space-between">
+        <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="6px">
+          夕陽黃金音樂市集
+        </Text>
+        <VStack
+          pt="2px"
+          pl="6px"
+          align="flex-start"
+          spacing="0"
+          fontSize="sm"
+          color="#4F4F4F"
+        >
+          <Text color="#656565">12/11(六) 14:00-20:00</Text>
+          <Text>12/18(六) 14:00-20:00</Text>
+          <Text>淡水海關碼頭</Text>
+        </VStack>
+        <Flex w="100%" mt="12px">
+          <Button
+            size="sm"
+            w="40%"
+            bg="white"
+            border="1px solid #4f4f4f"
+            borderRadius="0"
+          >
+            節目單
+          </Button>
+          <Button
+            size="sm"
+            flex="1"
+            bg="#495460"
+            color="white"
+            borderRadius="0"
+            colorScheme="black"
+          >
+            詳細資訊和報名
+          </Button>
+        </Flex>
+      </Flex>
+    </Flex>
   );
 };
