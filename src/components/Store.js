@@ -82,7 +82,7 @@ const shopData = [
   },
   {
     id: 'store03',
-    title: '福容大飯店淡水漁人碼頭',
+    title: 'Cumar',
     plans: ['莫代爾三角內褲9折'],
     image: store03,
   },
@@ -155,22 +155,34 @@ function Store() {
               於新北市立淡水古蹟博物館九個館舍持「光映淡水」手拿牌拍照，在臉書或IG打卡，即可於下列指定店家享有限量優惠。
             </Text>
           </Flex>
-          <Text borderBottom="2px solid black" pt="40px">
+          <Text
+            fontSize={{ base: 'xl', md: '2xl' }}
+            borderBottom="2px solid black"
+            w
+            pt="40px"
+          >
             新北市立淡水古蹟博物館
           </Text>
           <Grid
+            py="10px"
             w="100%"
-            templateColumns={{ base: 'repeat(3, 1fr)', md: 'repeat(5, 1fr)' }}
-            gap={2}
+            templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(5, 1fr)' }}
+            gap={1}
           >
             <Buildings />
           </Grid>
-          <Text borderBottom="2px solid black" pt="40px">
+          <Text
+            fontSize={{ base: 'xl', md: '2xl' }}
+            borderBottom="2px solid black"
+            pt="40px"
+            textAlign="center"
+          >
             店家
           </Text>
           <Grid
+            py="10px"
             w="100%"
-            templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
+            templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }}
             gap={1}
           >
             <Shops />
@@ -197,14 +209,14 @@ const Building = props => {
   return (
     <VStack spacing="0" mx="12px" my="12px">
       <Image
-        w="160px"
+        w="100%"
         h="150px"
         objectFit="cover"
         src={props.image}
         borderTopLeftRadius="32px"
-        alt="淡水紅毛城"
+        alt={props.title}
       />
-      <Box h="20px" bg="#FFF57F" w="100%" textAlign="center">
+      <Box h="28px" w="100%" bg="#FFF57F" textAlign="center">
         {props.title}
       </Box>
     </VStack>
@@ -223,21 +235,42 @@ const Shops = () => {
 
 const Shop = props => {
   return (
-    <HStack mx="12px" my="12px" borderTopLeftRadius="32px" bg="brand.500">
-      <VStack spacing="0">
+    <HStack
+      mx="12px"
+      my="12px"
+      borderTopLeftRadius="32px"
+      bg="brand.500"
+      align="stretch"
+    >
+      <Image
+        w={{ base: '100px', md: '160px' }}
+        // h={{ base: '', md: '150px' }}
+        minH={{ base: '', md: '150px' }}
+        objectFit="cover"
+        src={props.image}
+        borderTopLeftRadius="32px"
+        alt={props.title}
+      />
+      {/* <VStack spacing="0">
         <Image
-          w="160px"
-          h="150px"
+          w={{ base: '100px', md: '160px' }}
+          h={{ base: '', md: '150px' }}
           objectFit="cover"
           src={props.image}
           borderTopLeftRadius="32px"
           alt={props.title}
-        />
-        {/* <Box h="20px" bg="brand.500" color="white" w="100%" textAlign="center">
+        /> */}
+      {/* <Box h="20px" bg="brand.500" color="white" w="100%" textAlign="center">
           <Text fontSize="xs">{props.title}</Text>
         </Box> */}
-      </VStack>
-      <VStack align="flex-start" color="white" flex="1" px="10px">
+      {/* </VStack> */}
+      <VStack
+        align="flex-start"
+        justify="center"
+        color="white"
+        flex="1"
+        p="10px"
+      >
         <Box h="20px" bg="brand.500" color="white">
           <Text fontSize="sm" textAlign="left">
             {props.title}
