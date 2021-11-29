@@ -77,7 +77,7 @@ function Intro() {
           <AspectRatio w="75%" ratio={2 / 1}>
             <iframe
               title="naruto"
-              src="https://www.youtube.com/embed/yqi0hAmnG3Y"
+              src="https://www.youtube.com/embed/NwmxVeOhqkk"
               allowFullScreen
             />
           </AspectRatio>

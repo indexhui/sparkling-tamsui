@@ -156,7 +156,7 @@ function Store() {
             </Text>
           </Flex>
           <Text
-            fontSize={{ base: 'xl', md: '2xl' }}
+            fontSize={{ base: 'xl', md: 'xl' }}
             borderBottom="2px solid black"
             w
             pt="40px"
@@ -167,22 +167,22 @@ function Store() {
             py="10px"
             w="100%"
             templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(5, 1fr)' }}
-            gap={1}
+            gap="8px"
           >
             <Buildings />
           </Grid>
           <Text
-            fontSize={{ base: 'xl', md: '2xl' }}
+            fontSize={{ base: 'xl', md: 'xl' }}
             borderBottom="2px solid black"
             pt="40px"
             textAlign="center"
           >
-            店家
+            周邊夥伴
           </Text>
           <Grid
             py="10px"
             w="100%"
-            templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }}
+            templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
             gap={1}
           >
             <Shops />
@@ -243,9 +243,9 @@ const Shop = props => {
       align="stretch"
     >
       <Image
-        w={{ base: '100px', md: '160px' }}
+        w={{ base: '100px', md: '300px' }}
         // h={{ base: '', md: '150px' }}
-        minH={{ base: '', md: '150px' }}
+        minH={{ base: '', md: '300px' }}
         objectFit="cover"
         src={props.image}
         borderTopLeftRadius="32px"
@@ -271,18 +271,22 @@ const Shop = props => {
         flex="1"
         p="10px"
       >
-        <Box h="20px" bg="brand.500" color="white">
-          <Text fontSize="sm" textAlign="left">
+        <Box pb="10px" color="white">
+          <Text
+            fontSize={{ base: 'sm', md: '2xl' }}
+            textAlign="left"
+            fontWeight="bold"
+          >
             {props.title}
           </Text>
         </Box>
         {props.plans && (
           <VStack align="flex-start" spacing="2px">
-            <Text fontSize="xs" color="gray.200">
+            <Text fontSize={{ base: 'sm', md: 'xl' }} color="gray.200">
               優惠方案
             </Text>
             {props.plans?.map(plan => (
-              <Text fontSize="xs" key={plan}>
+              <Text fontSize={{ base: 'sm', md: 'xl' }} key={plan}>
                 {plan}
               </Text>
             ))}

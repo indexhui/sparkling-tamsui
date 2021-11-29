@@ -96,7 +96,7 @@ function Time() {
                 mb={{ base: '24px', md: '0' }}
               />
               <VStack align="left">
-                <Heading fontSize="28px">{work.title}</Heading>
+                <Heading fontSize="xl">{work.title}</Heading>
                 <Text>{work.description}</Text>
                 <Text fontSize="sm">{work.date}</Text>
                 <Text fontSize="sm">{work.place}</Text>
