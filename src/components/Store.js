@@ -140,7 +140,7 @@ const shopData = [
 
 function Store() {
   return (
-    <Flex justify="center" bg="white">
+    <Flex justify="center" bg="white" pt="40px">
       <Flex
         w={{ base: '100%', sm: '100%', md: '960px', '2xl': '70%' }}
         px={{ base: '20px', md: '0' }}

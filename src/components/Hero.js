@@ -9,7 +9,7 @@ function Hero() {
   return (
     <Box
       h="100vh"
-      bgGradient="linear(to-b, brand.500, brand.100)"
+      bgGradient="linear(to-b, brand.500 0%,brand.500 10%, brand.100)"
       position="relative"
       justify="center"
       align="center"

@@ -118,29 +118,42 @@ function Wave() {
             <Image w="120px" src={titleWave} alt="時光循跡" />
             <Text color="gray.600"> 淡水碼頭系列活動 </Text>
           </Flex>
-          <Flex justify="flex-start" w="100%">
+          {/* <Flex justify="flex-start" w="100%">
             <Heading size="md" textAlign="left" letterSpacing="4px">
               水岸光影廊道
             </Heading>
-          </Flex>
-          <Flex w="100%" wrap="wrap">
-            <Flex w={{ base: '100%', md: '50%' }} wrap="wrap">
-              {waveArt.map(art => (
-                <HStack w="50%" key={art.name}>
-                  <Flex
-                    bg="#F8B62B"
-                    w="32px"
-                    h="32px"
-                    color="white"
-                    rounded="full"
-                    align="center"
-                    justify="center"
-                  >
-                    {art.order}
-                  </Flex>
-                  <Text color="black">{art.name}</Text>
-                </HStack>
-              ))}
+          </Flex> */}
+          <Flex w="100%" wrap="wrap" bg="brand.500" borderRadius="6px">
+            <Flex w={{ base: '100%', md: '50%' }} direction="column" p="24px">
+              <Heading
+                size="md"
+                color="white"
+                textAlign="left"
+                letterSpacing="4px"
+              >
+                水岸光影廊道
+              </Heading>
+              <Text color="white" my="16px">
+                淡水為一個四百年的歷史場域，在山脈、河川、海洋的共同孕育下，匯聚豐沛的人文能量建構出一處文化古都。2021水岸光影廊道以「時光訊息」為題，與藝術家及藝術團隊共同探索遺落在淡水的時光訊息。
+              </Text>
+              <Flex wrap="wrap">
+                {waveArt.map(art => (
+                  <HStack w="50%" key={art.name} my="8px">
+                    <Flex
+                      bg="#F8B62B"
+                      w="32px"
+                      h="32px"
+                      color="white"
+                      rounded="full"
+                      align="center"
+                      justify="center"
+                    >
+                      {art.order}
+                    </Flex>
+                    <Text color="white">{art.name}</Text>
+                  </HStack>
+                ))}
+              </Flex>
             </Flex>
             <Flex w={{ base: '100%', md: '50%' }} justify="flex-end">
               <Image

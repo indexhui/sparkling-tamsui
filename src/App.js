@@ -22,7 +22,9 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Navbar />
-      <Hero />
+      <Element name="hero" id="hero">
+        <Hero />
+      </Element>
       <Intro />
       <Box w="100%" overflow="hidden">
         <Element name="time" id="time">

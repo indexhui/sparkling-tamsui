@@ -53,7 +53,13 @@ const timeWorks = [
 
 function Time() {
   return (
-    <Flex bg="brand.500" color="white" justify="center" position="relative">
+    <Flex
+      bg="brand.500"
+      color="white"
+      justify="center"
+      position="relative"
+      pt="32px"
+    >
       <Image
         src={decorateTopRight}
         w="300px"

@@ -13,6 +13,7 @@ import {
   useDisclosure,
   Text,
   Icon,
+  Fade,
 } from '@chakra-ui/react';
 
 import { HamburgerIcon } from '@chakra-ui/icons';
@@ -25,6 +26,7 @@ import { useState } from 'react';
 import logotype from '../assets/images/logotype.svg';
 
 export default function Navbar() {
+  const [isActive, setIsActive] = useState(true);
   return (
     <Flex
       w="100%"
@@ -40,7 +42,27 @@ export default function Navbar() {
       position="fixed"
     >
       <Flex w="1080px" justify="space-between" align="center">
-        <Image w="150px" src={logotype} alt="sparkling-tamsui" />
+        <Fade in={!isActive}>
+          <Link
+            spy={true}
+            hashSpy={true}
+            as={ReachLink}
+            to="hero"
+            position="relative"
+            smooth={true}
+            color="white"
+            onSetActive={() => setIsActive(true)}
+            onSetInactive={() => setIsActive(false)}
+            fontSize={{ base: '18px', md: '16px' }}
+          >
+            <Image
+              opacity={isActive ? '0' : '1'}
+              w="150px"
+              src={logotype}
+              alt="sparkling-tamsui"
+            />
+          </Link>
+        </Fade>
         <MobileNav />
         <DesktopNav />
       </Flex>
