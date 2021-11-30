@@ -17,7 +17,7 @@ function MainFooter() {
         py="40px"
         color="white"
       >
-        <Flex w={{ base: '100%', md: '33.33%' }} direction="column">
+        <Flex w={{ base: '100%', md: '33.33%' }} direction="column" py="5px">
           <VStack spacing="20px" align="flex-start">
             <Box>
               <Text color="gray.300">｜主辦單位｜</Text>
@@ -35,7 +35,7 @@ function MainFooter() {
           </VStack>
         </Flex>
 
-        <Flex w={{ base: '100%', md: '33.33%' }} direction="column">
+        <Flex w={{ base: '100%', md: '33.33%' }} direction="column" py="5px">
           <VStack spacing="20px" align="flex-start">
             <Box>
               <Text color="gray.300">｜協辦單位｜</Text>
@@ -49,7 +49,7 @@ function MainFooter() {
           </VStack>
         </Flex>
 
-        <Flex w={{ base: '100%', md: '33.33%' }} direction="column">
+        <Flex w={{ base: '100%', md: '33.33%' }} direction="column" py="5px">
           <VStack spacing="20px" align="flex-start">
             <Box>
               <Text color="gray.300">｜特別感謝｜</Text>
@@ -61,7 +61,7 @@ function MainFooter() {
           </VStack>
         </Flex>
       </Flex>
-      <Text color="rgba(255,255,255,.5)">
+      <Text color="rgba(255,255,255,.5)" textAlign="center" px="20px" pb="20px">
         © 2021 Tamsui Historical Museum Taiwan All rights reserved.
       </Text>
     </Flex>

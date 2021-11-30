@@ -167,7 +167,7 @@ function Store() {
             py="10px"
             w="100%"
             templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(5, 1fr)' }}
-            gap="8px"
+            gap={{ base: 2, md: 4 }}
           >
             <Buildings />
           </Grid>
@@ -207,7 +207,7 @@ const Buildings = () => {
 
 const Building = props => {
   return (
-    <VStack spacing="0" mx="12px" my="12px">
+    <VStack spacing="0" my="12px">
       <Image
         w="100%"
         h="150px"
@@ -216,9 +216,16 @@ const Building = props => {
         borderTopLeftRadius="32px"
         alt={props.title}
       />
-      <Box h="28px" w="100%" bg="#FFF57F" textAlign="center">
+      <Flex
+        h="28px"
+        w="100%"
+        bg="#FFF57F"
+        align="center"
+        justify="center"
+        fontSize={{ base: '12px', md: '14px' }}
+      >
         {props.title}
-      </Box>
+      </Flex>
     </VStack>
   );
 };

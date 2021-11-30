@@ -15,11 +15,12 @@ const timeWorks = [
   {
     title: '映河',
     description:
-      '《映河》特展透過齊柏林的鏡頭，以鳥的視野與雲的高度，看見臺灣河流原初的美麗，映照環境與城市交融後的變化，更映現人們對自然的初心。影像提供｜看見・齊柏林基金會',
+      '《映河》特展透過齊柏林的鏡頭，以鳥的視野與雲的高度，看見臺灣河流原初的美麗，映照環境與城市交融後的變化，更映現人們對自然的初心。',
     image: time01,
     place: '齊柏林空間',
     date: '10/9(六)開展',
     id: 'time01',
+    imageProvided: '影像提供｜看見・齊柏林基金會',
   },
   {
     title: '探索淡水密碼─淡水文史特展河',
@@ -100,6 +101,9 @@ function Time() {
                 <Text>{work.description}</Text>
                 <Text fontSize="sm">{work.date}</Text>
                 <Text fontSize="sm">{work.place}</Text>
+                {work.imageProvided && (
+                  <Text fontSize="sm">{work.imageProvided}</Text>
+                )}
               </VStack>
             </Flex>
           ))}

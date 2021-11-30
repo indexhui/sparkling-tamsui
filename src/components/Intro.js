@@ -63,9 +63,6 @@ function Intro() {
                     borderRadius="4px"
                   >
                     <Image w="120px" src={item.image} alt={item.id} />
-                    {/* <Heading fontSize="lg" my="5px">
-                    {item.title}
-                  </Heading> */}
                     <Text fontWeight="300" textAlign="center" mt="6px">
                       {item.description}
                     </Text>
@@ -76,7 +73,7 @@ function Intro() {
           </Grid>
           <AspectRatio w="75%" ratio={2 / 1}>
             <iframe
-              title="naruto"
+              title="tamsui"
               src="https://www.youtube.com/embed/NwmxVeOhqkk"
               allowFullScreen
             />
@@ -90,7 +87,7 @@ function Intro() {
 const intro = [
   {
     title: '時光循跡',
-    description: '在藝文展演探索淡水的時光軌跡，感受淡水豐厚的文化底蘊。',
+    description: '在藝文展演探索淡水的時光軌跡，感受淡水豐厚的文化底蘊',
     image: titleTime,
     id: 'intro-time',
     name: 'time',

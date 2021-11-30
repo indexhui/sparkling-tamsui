@@ -2,21 +2,51 @@ import { Flex, Box, VStack, Image, Heading } from '@chakra-ui/react';
 import kv from '../assets/images/kv.svg';
 import time from '../assets/images/time.svg';
 import logotype from '../assets/images/logotype.svg';
+import logoTime from '../assets/images/logo_time.svg';
+import kvMobile from '../assets/images/kv_mobile.svg';
 
 function Hero() {
   return (
     <Box
-      h="700px"
+      h="100vh"
       bgGradient="linear(to-b, brand.500, brand.100)"
       position="relative"
       justify="center"
       align="center"
+      overflow="hidden"
     >
+      <Box
+        display={{ base: 'block', md: 'none' }}
+        w="156px"
+        h="475px"
+        position="absolute"
+        bottom="10%"
+        left="35px"
+        bgImage={`url('${logoTime}')`}
+        bgRepeat="no-repeat"
+        bgSize="cover"
+        bgPosition="center top"
+      ></Box>
+      <Box
+        display={{ base: 'block', md: 'none' }}
+        w="300px"
+        h="100%"
+        position="absolute"
+        top="60px"
+        right="0"
+        bgImage={`url('${kvMobile}')`}
+        bgRepeat="no-repeat"
+        bgSize="cover"
+        bgPosition="center top"
+      ></Box>
+
       <Flex
+        display={{ base: 'none', md: 'flex' }}
         w={{ base: '100%', md: '80%', lg: '1080px' }}
         h="700px"
         justify="space-between"
         pt="80px"
+        mt="60px"
         position="relative"
         zIndex="10"
       >
@@ -49,13 +79,15 @@ function Hero() {
         <Image w="264px" h="99px" src={time} />
       </Flex>
       <Box
+        display={{ base: 'none', md: 'block' }}
         w="100%"
-        h={{ base: '400px', md: '600px' }}
+        h={{ base: '400px', md: '400px' }}
         position="absolute"
         bottom="0"
         bgImage={`url('${kv}')`}
         bgRepeat="no-repeat"
         bgSize="cover"
+        bgPosition="center top "
       ></Box>
     </Box>
   );
