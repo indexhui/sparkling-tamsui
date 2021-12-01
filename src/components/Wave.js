@@ -9,7 +9,6 @@ import {
   Text,
   Heading,
   Grid,
-  GridItem,
   Button,
   Modal,
   ModalOverlay,
@@ -26,7 +25,8 @@ import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import titleWave from '../assets/images/title_wave.svg';
 
-import waveMap from '../assets/images/wave_map.svg';
+// import waveMap from '../assets/images/wave_map.svg';
+import map from '../assets/images/map.png';
 
 import art01 from '../assets/images/art01.png';
 import art02 from '../assets/images/art02.png';
@@ -77,7 +77,7 @@ const waveArt = [
     order: '03',
     name: '觀/因',
     description:
-      '百年來，無數人在淡水河畔建構夢想的版圖，在這裡創造輝煌時刻。路面上，古蹟廊帶留下了時光的遺跡，而川流的淡水河從未停下來。作品像是標籤註記時光，定義2021年此時此刻的淡水與我們。',
+      '藝術團隊黃樑疑夢俱樂部以「觀/因」思考座落於淡水海關碼頭對岸的觀音山及風的連動。紀錄數百年來看見人潮川流，白日的辛勤以及夜的寧靜，是山的遙望與祝福。',
     image: art03,
     avatar: artist03,
     artist: '黃樑疑夢俱樂部',
@@ -87,7 +87,7 @@ const waveArt = [
     order: '04',
     name: '聚',
     description:
-      '以時間情書為概念創作名為「聚」的作品。作品將似魚擬船以擁抱的形式相依偎，象徵擁抱這座港口，在海洋水波、聲音餘波纏繞，共振在琴弦上訴說相聚，相映穿越千百年的兩段基因，平凡卻美麗。 ，而川流的淡水河從未停下來。作品像是標籤註記時光，定義2021年此時此刻的淡水與我們。',
+      '以時間情書為概念創作名為「聚」的作品。作品將似魚擬船以擁抱的形式相依偎，象徵擁抱這座港口，在海洋水波、聲音餘波纏繞，共振在琴弦上訴說相聚，相映穿越千百年的兩段基因，平凡卻美麗。',
     image: art04,
     avatar: artist04,
     artist: '王俊淵',
@@ -116,7 +116,7 @@ function Wave() {
         <VStack w="100%" spacing="32px">
           <Flex textAlign="center" direction="column" align="center">
             <Image w="120px" src={titleWave} alt="時光循跡" />
-            <Text color="gray.600"> 淡水碼頭系列活動 </Text>
+            <Text color="gray.600"> 淡水海關碼頭系列活動</Text>
           </Flex>
           {/* <Flex justify="flex-start" w="100%">
             <Heading size="md" textAlign="left" letterSpacing="4px">
@@ -136,6 +136,10 @@ function Wave() {
               <Text color="white" my="16px">
                 淡水為一個四百年的歷史場域，在山脈、河川、海洋的共同孕育下，匯聚豐沛的人文能量建構出一處文化古都。2021水岸光影廊道以「時光訊息」為題，與藝術家及藝術團隊共同探索遺落在淡水的時光訊息。
               </Text>
+              <Box color="white">
+                <Text>12/4 (六)-1/3(一)</Text>
+                <Text>每日 17:00-22:00點燈</Text>
+              </Box>
               <Flex wrap="wrap">
                 {waveArt.map(art => (
                   <HStack w="50%" key={art.name} my="8px">
@@ -153,12 +157,27 @@ function Wave() {
                     <Text color="white">{art.name}</Text>
                   </HStack>
                 ))}
+                <HStack w="50%" my="8px">
+                  <Flex
+                    bg="#8EC31F"
+                    w="32px"
+                    h="32px"
+                    color="white"
+                    rounded="full"
+                    align="center"
+                    justify="center"
+                  >
+                    06
+                  </Flex>
+                  <Text color="white">耶誕裝置</Text>
+                </HStack>
               </Flex>
             </Flex>
             <Flex w={{ base: '100%', md: '50%' }} justify="flex-end">
               <Image
                 w={{ base: '100%', md: '400px' }}
-                src={waveMap}
+                src={map}
+                objectFit="cover"
                 alt="波光水岸 地圖"
               />
             </Flex>
@@ -271,8 +290,8 @@ const WaveEvent01 = () => {
           fontSize="sm"
           color="#4F4F4F"
         >
-          <Text color="#656565">12/4(六) 17:30-20:00</Text>
-          <Text>12/5(日) 17:00-19:00</Text>
+          <Text>12/4(六) 18:00-20:30</Text>
+          <Text>12/5(日) 18:00-20:00</Text>
           <Text textAlign="right">淡水海關碼頭 C棟倉庫</Text>
         </VStack>
 
@@ -291,7 +310,7 @@ const WaveEvent01Schedule = () => {
     <>
       <Button
         size="sm"
-        w="40%"
+        w="50%"
         bg="white"
         border="1px solid #4f4f4f"
         borderRadius="0"
@@ -340,27 +359,27 @@ const WaveEvent01Info = () => {
         colorScheme="black"
         onClick={onOpen}
       >
-        詳細資訊和報名
+        詳細資訊
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader bg="brand.500" color="white">
-            活動簡介
+            詳細資訊
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
-            <Text>12/4(六)17:30-20:00</Text>
-            <Text>17:30-18:30 黃偉軒✕晟SHENG</Text>
-            <Text>18:30-19:00 洪梓倪✕___cssss___</Text>
-            <Text>19:00-19:30 都普勒浪潮✕林立翔</Text>
-            <Text>19:30-20:00 HH</Text>
+            <Text>12/4(六)18:00-20:30</Text>
+            <Text>黃偉軒✕晟SHENG</Text>
+            <Text>洪梓倪✕___cssss___</Text>
+            <Text>都普勒浪潮✕林立翔</Text>
+            <Text>HH</Text>
             <Divider my="5px" />
-            <Text>12/5(日)17:00-19:00</Text>
-            <Text>18:00-18:30 黃偉</Text>
-            <Text>18:30-19:00 王連晟</Text>
-            <Text>19:00-19:30 黃偉軒✕晟SHENG</Text>
-            <Text>19:30-20:00 都普勒浪潮✕林立翔</Text>
+            <Text>12/5(日)18:00-20:00</Text>
+            <Text>黃偉</Text>
+            <Text>王連晟</Text>
+            <Text>黃偉軒✕晟SHENG</Text>
+            <Text>都普勒浪潮✕林立翔</Text>
             <Divider my="5px" />
             <Text>
               「波響—AudioVisual數位音像表演」需事先報名，詳細報名資訊及當日線上直播請參考
@@ -412,7 +431,7 @@ const WaveEvent02 = () => {
           fontSize="sm"
           color="#4F4F4F"
         >
-          <Text color="#656565">12/4(六) 10:00-19:00</Text>
+          <Text color="#656565">12/4(六)起 10:00-19:00</Text>
           <Text>淡水海關碼頭 B棟倉庫</Text>
         </VStack>
         <Flex w="100%" mt="12px">
@@ -430,7 +449,7 @@ const WaveEvent02Schedule = () => {
     <>
       <Button
         size="sm"
-        w="40%"
+        w="50%"
         bg="white"
         border="1px solid #4f4f4f"
         borderRadius="0"
@@ -478,13 +497,13 @@ const WaveEvent02Info = () => {
         colorScheme="black"
         onClick={onOpen}
       >
-        詳細資訊和報名
+        詳細資訊
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader bg="brand.500" color="white">
-            活動簡介
+            詳細資訊
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
@@ -551,7 +570,7 @@ const WaveEvent03Schedule = () => {
     <>
       <Button
         size="sm"
-        w="40%"
+        w="50%"
         bg="white"
         border="1px solid #4f4f4f"
         borderRadius="0"
@@ -599,13 +618,13 @@ const WaveEvent03Info = () => {
         colorScheme="black"
         onClick={onOpen}
       >
-        詳細資訊和報名
+        詳細資訊
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader bg="brand.500" color="white">
-            活動簡介
+            詳細資訊
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
@@ -686,7 +705,7 @@ const WaveEvent04Schedule = () => {
     <>
       <Button
         size="sm"
-        w="40%"
+        w="50%"
         bg="white"
         border="1px solid #4f4f4f"
         borderRadius="0"
@@ -734,13 +753,13 @@ const WaveEvent04Info = () => {
         colorScheme="black"
         onClick={onOpen}
       >
-        詳細資訊和報名
+        詳細資訊
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader bg="brand.500" color="white">
-            詳細資訊和報名
+            詳細資訊
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
@@ -812,7 +831,7 @@ const WaveEvent05Schedule = () => {
     <>
       <Button
         size="sm"
-        w="40%"
+        w="50%"
         bg="white"
         border="1px solid #4f4f4f"
         borderRadius="0"
@@ -868,13 +887,13 @@ const WaveEvent05Info = () => {
         colorScheme="black"
         onClick={onOpen}
       >
-        詳細資訊和報名
+        詳細資訊
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader bg="brand.500" color="white">
-            詳細資訊和報名
+            詳細資訊
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
@@ -919,7 +938,7 @@ const WaveEvent06 = () => {
       <Image src={event06} />
       <Flex flex="1" p="12px" direction="column" justify="space-between">
         <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="6px">
-          光影劇場
+          光劇場、影劇場
         </Text>
         <VStack
           pt="2px"
@@ -934,8 +953,8 @@ const WaveEvent06 = () => {
           <Text>淡水海關碼頭 C棟倉庫</Text>
         </VStack>
         <Flex w="100%" mt="12px">
-          <WaveEvent05Schedule />
-          <WaveEvent05Info />
+          <WaveEvent06Schedule />
+          <WaveEvent06Info />
         </Flex>
       </Flex>
     </Flex>
@@ -948,7 +967,7 @@ const WaveEvent06Schedule = () => {
     <>
       <Button
         size="sm"
-        w="40%"
+        w="50%"
         bg="white"
         border="1px solid #4f4f4f"
         borderRadius="0"
@@ -996,26 +1015,34 @@ const WaveEvent06Info = () => {
         colorScheme="black"
         onClick={onOpen}
       >
-        詳細資訊和報名
+        詳細資訊
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader bg="brand.500" color="white">
-            詳細資訊和報名
+            詳細資訊
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
             <Text>12/12(日)</Text>
-            <Text>13:00-14:00 光劇場 身聲劇場</Text>
-            <Text>19:00-20:00 光劇場 頑書趣工作室 </Text>
+            <HStack>
+              <Text w="92px">13:00-14:00</Text>
+              <Text>光劇場 身聲劇場</Text>
+            </HStack>
+            <HStack>
+              <Text w="92px">19:00-20:00</Text>
+              <Text>光劇場 頑書趣工作室</Text>
+            </HStack>
             <Divider my="5px" />
             <Text>12/19(日) 13:00-15:00 影劇場 每場次20-30分鐘</Text>
             <Text>13:00 樹人家商</Text>
             <Text>14:00 汐止東山國小</Text>
             <Text>14:30 影子傳奇劇團 </Text>
             <Divider my="5px" />
-            <Text>「光影劇場」需現場排隊入場， 節目開場前10分鐘開放入場。</Text>
+            <Text>
+              「光劇場」、「影劇場」需現場排隊入場，節目開場前10分鐘開放入場。
+            </Text>
           </ModalBody>
 
           <ModalFooter bg="brand.500" color="white">
@@ -1058,11 +1085,11 @@ const WaveEvent07 = () => {
         >
           <Text>12/12(日) 18:30 52赫茲我愛你</Text>
           <Text>12/19(日) 18:30 冰雪奇緣</Text>
-          <Text>淡水海關碼頭 C棟倉庫</Text>
+          <Text>淡水海關碼頭 棟倉庫</Text>
         </VStack>
         <Flex w="100%" mt="12px">
-          <WaveEvent06Schedule />
-          <WaveEvent06Info />
+          <WaveEvent07Schedule />
+          <WaveEvent07Info />
         </Flex>
       </Flex>
     </Flex>
@@ -1075,7 +1102,7 @@ const WaveEvent07Schedule = () => {
     <>
       <Button
         size="sm"
-        w="40%"
+        w="50%"
         bg="white"
         border="1px solid #4f4f4f"
         borderRadius="0"
@@ -1123,13 +1150,13 @@ const WaveEvent07Info = () => {
         colorScheme="black"
         onClick={onOpen}
       >
-        詳細資訊和報名
+        詳細資訊
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader bg="brand.500" color="white">
-            詳細資訊和報名
+            詳細資訊
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
@@ -1181,8 +1208,8 @@ const WaveEvent08 = () => {
           <Text>淡水海關碼頭 A棟</Text>
         </VStack>
         <Flex w="100%" mt="12px">
-          <WaveEvent07Schedule />
-          <WaveEvent07Info />
+          <WaveEvent08Schedule />
+          <WaveEvent08Info />
         </Flex>
       </Flex>
     </Flex>
@@ -1195,7 +1222,7 @@ const WaveEvent08Schedule = () => {
     <>
       <Button
         size="sm"
-        w="40%"
+        w="50%"
         bg="white"
         border="1px solid #4f4f4f"
         borderRadius="0"
@@ -1244,13 +1271,13 @@ const WaveEvent08Info = () => {
         colorScheme="black"
         onClick={onOpen}
       >
-        詳細資訊和報名
+        詳細資訊
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader bg="brand.500" color="white">
-            詳細資訊和報名
+            詳細資訊
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
@@ -1319,7 +1346,7 @@ const WaveEvent09Schedule = () => {
     <>
       <Button
         size="sm"
-        w="40%"
+        w="50%"
         bg="white"
         border="1px solid #4f4f4f"
         borderRadius="0"
@@ -1367,13 +1394,13 @@ const WaveEvent09Info = () => {
         colorScheme="black"
         onClick={onOpen}
       >
-        詳細資訊和報名
+        詳細資訊
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader bg="brand.500" color="white">
-            詳細資訊和報名
+            詳細資訊
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">

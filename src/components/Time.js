@@ -7,7 +7,7 @@ import decorateBottomLeft from '../assets/images/decorate_bottom_left.png';
 import decorateMid from '../assets/images/decorate_mid.png';
 
 import time01 from '../assets/images/time01.png';
-import time02 from '../assets/images/time02.png';
+import time02 from '../assets/images/time02.jpg';
 import time03 from '../assets/images/time03.png';
 import time04 from '../assets/images/time04.png';
 

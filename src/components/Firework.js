@@ -16,8 +16,11 @@ import {
   ModalCloseButton,
   Grid,
   Box,
+  Link,
   Icon,
 } from '@chakra-ui/react';
+
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import { MdPlace } from 'react-icons/md';
 
@@ -25,7 +28,7 @@ import titleFirework from '../assets/images/title_firework.svg';
 
 import firework01 from '../assets/images/firework01.png';
 import firework02 from '../assets/images/firework02.png';
-import firework03 from '../assets/images/firework03.png';
+import firework03 from '../assets/images/firework03.jpeg';
 
 function Firework() {
   return (
@@ -73,7 +76,7 @@ const Fire01 = () => {
       <Image src={firework01} />
       <Flex flex="1" p="12px" direction="column" justify="space-between">
         <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="0px">
-          光耀新北－1314就愛你 跨河煙火
+          「光耀新北-1314就愛你」跨河煙火秀
         </Text>
         <VStack
           pt="2px"
@@ -177,9 +180,16 @@ const Fire02 = () => {
       color="white"
     >
       <Image src={firework02} />
-      <Box p="12px" borderBottomLeftRadius="6px" borderBottomRightRadius="6px">
+      <Flex
+        flex="1"
+        direction="column"
+        justify="space-between"
+        p="12px"
+        borderBottomLeftRadius="6px"
+        borderBottomRightRadius="6px"
+      >
         <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="0px">
-          紙風車劇團
+          紙風車劇場-雞城故事
         </Text>
         <VStack
           pt="2px"
@@ -188,7 +198,6 @@ const Fire02 = () => {
           fontSize="sm"
           color="#4F4F4F"
         >
-          <Text color="white">紙風車劇團－雞城故事</Text>
           <Text color="white">12/31(五)18:30</Text>
           <HStack align="center" spacing="2px" color="white">
             <Icon as={MdPlace} />
@@ -200,7 +209,7 @@ const Fire02 = () => {
           <Fire02Info />
           <Fire02Apply />
         </Flex>
-      </Box>
+      </Flex>
     </Flex>
   );
 };
@@ -289,9 +298,16 @@ const Fire03 = () => {
       color="white"
     >
       <Image src={firework03} />
-      <Box p="12px" borderBottomLeftRadius="6px" borderBottomRightRadius="6px">
+      <Flex
+        flex="1"
+        direction="column"
+        justify="space-between"
+        p="12px"
+        borderBottomLeftRadius="6px"
+        borderBottomRightRadius="6px"
+      >
         <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="0px">
-          淡水聲光夜
+          古蹟親子活動 藝起童樂會
         </Text>
         <VStack
           pt="2px"
@@ -300,7 +316,6 @@ const Fire03 = () => {
           fontSize="sm"
           color="#4F4F4F"
         >
-          <Text color="white">淡水聲光夜－親子活動</Text>
           <Text color="white">12/31(五)</Text>
           <HStack align="center" spacing="2px" color="white">
             <Icon as={MdPlace} />
@@ -312,7 +327,7 @@ const Fire03 = () => {
           <Fire03Info />
           <Fire03Apply />
         </Flex>
-      </Box>
+      </Flex>
     </Flex>
   );
 };
@@ -338,7 +353,7 @@ const Fire03Info = () => {
           <ModalCloseButton />
           <ModalBody>
             <Text>
-              新北市立淡水古蹟博物館舉辦親子活動，邀請民眾一起體驗淡水文化之美。
+              為打造滬水一方成為融合文化及教育推廣的場域，本館12月31日於滬水一方藝文空間3樓特別規劃一系列寓教於樂的親子活動，透過手眼協調、愛物惜物與腦力激盪等多樣化的學習元素，讓大小朋友可在此自由探索與互動，提供一個親子共遊的優質空間。
             </Text>
           </ModalBody>
 
@@ -373,7 +388,18 @@ const Fire03Apply = () => {
         <ModalContent bg="brand.500" color="white">
           <ModalHeader>報名資訊</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>報名方式請上新北市立淡水古蹟博物館官網</ModalBody>
+          <ModalBody>
+            報名方式請上
+            <Link
+              color="cyan.600"
+              href="https://www.tshs.ntpc.gov.tw/xceventsnews/cont?xsmsid=0G252620780150430418&sid=0L322422145908368005
+"
+              target="_blank"
+            >
+              新北市立淡水古蹟博物館官網
+              <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ModalBody>
 
           <ModalFooter>
             <Button colorScheme="white" mr={3} onClick={onClose}>

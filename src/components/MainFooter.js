@@ -41,9 +41,9 @@ function MainFooter() {
               <Text color="gray.300">｜協辦單位｜</Text>
               <VStack pl="12px" spacing="4px" align="flex-start">
                 <Text>新北市政府教育局</Text>
-                <Text>新北市政府教育局</Text>
+                <Text>新北市淡水區公所</Text>
                 <Text>新北市政府高灘地工程管理處</Text>
-                <Text>新北市圖書館</Text>
+                <Text>新北市立圖書館</Text>
               </VStack>
             </Box>
           </VStack>

@@ -110,7 +110,7 @@ const shopData = [
     id: 'store07',
     title: 'LA Villa',
     image: store07,
-    coupon: '「到店消費可換起司條乙份',
+    coupon: '到店消費可換起司條乙份',
   },
   {
     id: 'store08',
