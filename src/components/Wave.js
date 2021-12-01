@@ -24,8 +24,6 @@ import {
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import titleWave from '../assets/images/title_wave.svg';
-
-// import waveMap from '../assets/images/wave_map.svg';
 import map from '../assets/images/map.png';
 
 import art01 from '../assets/images/art01.png';
@@ -174,12 +172,7 @@ function Wave() {
               </Flex>
             </Flex>
             <Flex w={{ base: '100%', md: '50%' }} justify="flex-end">
-              <Image
-                w={{ base: '100%', md: '400px' }}
-                src={map}
-                objectFit="cover"
-                alt="波光水岸 地圖"
-              />
+              <Image w="100%" src={map} objectFit="cover" alt="波光水岸 地圖" />
             </Flex>
           </Flex>
           <WaveArt />

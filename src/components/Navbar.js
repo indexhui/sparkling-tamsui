@@ -23,7 +23,7 @@ import { Link as ReachLink, animateScroll as scroll } from 'react-scroll';
 
 import { useState } from 'react';
 
-import logotype from '../assets/images/logotype.svg';
+import logotype from '../assets/images/logotype.png';
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(true);

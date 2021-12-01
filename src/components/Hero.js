@@ -1,9 +1,9 @@
 import { Flex, Box, VStack, Image, Heading } from '@chakra-ui/react';
-import kv from '../assets/images/kv.svg';
-import time from '../assets/images/time.svg';
-import logotype from '../assets/images/logotype.svg';
-import logoTime from '../assets/images/logo_time.svg';
-import kvMobile from '../assets/images/kv_mobile.svg';
+import kvLong from '../assets/images/kv_long.png';
+import time from '../assets/images/time.png';
+import logotype from '../assets/images/logotype.png';
+import logoTime from '../assets/images/logo_time.png';
+import kvMobile from '../assets/images/kv_mobile.png';
 
 function Hero() {
   return (
@@ -81,13 +81,13 @@ function Hero() {
       <Box
         display={{ base: 'none', md: 'block' }}
         w="100%"
-        h={{ base: '400px', md: '400px' }}
+        h="65vh"
         position="absolute"
         bottom="0"
-        bgImage={`url('${kv}')`}
+        bgImage={`url('${kvLong}')`}
         bgRepeat="no-repeat"
         bgSize="cover"
-        bgPosition="center top "
+        bgPosition="center top"
       ></Box>
     </Box>
   );
