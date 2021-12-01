@@ -14,21 +14,22 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
+  Grid,
+  Box,
+  Icon,
 } from '@chakra-ui/react';
 
-import titleFirework from '../assets/images/title_firework.svg';
-import fire01 from '../assets/images/fire01.jpg';
+import { MdPlace } from 'react-icons/md';
 
-const fireworkDate01 = {
-  title: '京都teamLab展',
-  description: '糺之森和沈浸式藝術會碰撞出怎樣的火花',
-  image: fire01,
-  schedule: ['17:30-18:30 黃偉軒✕晟SHENG', '18:30-19:00 洪梓倪✕___cssss___'],
-};
+import titleFirework from '../assets/images/title_firework.svg';
+
+import firework01 from '../assets/images/firework01.png';
+import firework02 from '../assets/images/firework02.png';
+import firework03 from '../assets/images/firework03.png';
 
 function Firework() {
   return (
-    <Flex justify="center" bg="brand.500">
+    <Flex justify="center" bg="brand.500" pt="40px">
       <Flex
         w={{ base: '100%', sm: '100%', md: '960px', '2xl': '70%' }}
         px={{ base: '20px', md: '0' }}
@@ -38,18 +39,18 @@ function Firework() {
         <VStack>
           <Flex textAlign="center" direction="column" align="center">
             <Image w="120px" src={titleFirework} alt="時光循跡" />
-            <Text color="white"> 淡水聲光夜 </Text>
+            <Text color="white" py="12px">
+              淡水聲光夜
+            </Text>
           </Flex>
-          <HStack
-            w="100%"
-            wrap={{ base: 'wrap', md: 'nowrap' }}
-            spacing={{ base: '0', md: '24px' }}
+          <Grid
+            templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }}
+            gap={6}
           >
             <Fire01 />
-            <Fire01 />
-            <Fire01 />
-            <Fire01 />
-          </HStack>
+            <Fire02 />
+            <Fire03 />
+          </Grid>
         </VStack>
       </Flex>
     </Flex>
@@ -60,48 +61,68 @@ export default Firework;
 
 const Fire01 = () => {
   return (
-    <>
-      <VStack
-        w={{ base: '100%', md: '25%' }}
-        py="20px"
-        spacing="8px"
-        color="white"
-        align="flex-start"
-      >
-        <Image rounded="sm" w="100%" src={fireworkDate01.image} />
-        <Heading size="md">{fireworkDate01.title}</Heading>
-        <Text>{fireworkDate01.description}</Text>
-        <HStack w="100%" spacing="12px">
-          <FireSchedule01 />
-          <FireApply01 />
-        </HStack>
-      </VStack>
-    </>
+    <Flex
+      w="100%"
+      direction="column"
+      h="100%"
+      border="1px solid white"
+      borderBottomLeftRadius="6px"
+      borderBottomRightRadius="6px"
+      color="white"
+    >
+      <Image src={firework01} />
+      <Flex flex="1" p="12px" direction="column" justify="space-between">
+        <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="0px">
+          光耀新北－1314就愛你 跨河煙火
+        </Text>
+        <VStack
+          pt="2px"
+          align="flex-start"
+          spacing="0"
+          fontSize="sm"
+          color="#4F4F4F"
+        >
+          <Text color="white">12/31(五) 20:22</Text>
+          <HStack align="center" spacing="2px" color="white">
+            <Icon as={MdPlace} />
+            <Text>淡水古蹟博物館</Text>
+          </HStack>
+        </VStack>
+
+        <Flex w="100%" mt="12px">
+          <Fire01Info />
+          <Fire01Apply />
+        </Flex>
+      </Flex>
+    </Flex>
   );
 };
 
-const FireSchedule01 = () => {
+const Fire01Info = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Button
-        colorScheme="black"
+        colorScheme="white"
+        variant="outline"
+        border="1px solid #4f4f4f"
         w="100%"
-        bg="gray.800"
         borderRadius="0"
         onClick={onOpen}
       >
-        節目單
+        簡介
       </Button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>報名資訊</ModalHeader>
+        <ModalContent bg="brand.500" color="white">
+          <ModalHeader>簡介</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>{fireworkDate01.description}</ModalBody>
+          <ModalBody>
+            「光耀新北-1314就愛你」跨河煙火秀，今年位於淡江大橋施工構台及便道上，12月31日晚間8點22分將施放煙火13分14秒，並將表演細分為9個節目段，預計施放超過1萬發煙火彈。
+          </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button colorScheme="white" mr={3} onClick={onClose}>
               Close
             </Button>
           </ModalFooter>
@@ -111,7 +132,7 @@ const FireSchedule01 = () => {
   );
 };
 
-const FireApply01 = () => {
+const Fire01Apply = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -119,23 +140,245 @@ const FireApply01 = () => {
         w="100%"
         colorScheme="black"
         borderRadius="0"
-        variant="outline"
         onClick={onOpen}
+        bg="white"
+        color="brand.500"
+        border="1px solid white"
       >
         報名資訊
       </Button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent bg="brand.500" color="white">
           <ModalHeader>報名資訊</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>{fireworkDate01.description}</ModalBody>
+          <ModalBody>場地為開放空間，自由參觀</ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button colorScheme="white" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
+
+const Fire02 = () => {
+  return (
+    <Flex
+      w="100%"
+      direction="column"
+      h="100%"
+      border="1px solid white"
+      borderBottomLeftRadius="6px"
+      borderBottomRightRadius="6px"
+      color="white"
+    >
+      <Image src={firework02} />
+      <Box p="12px" borderBottomLeftRadius="6px" borderBottomRightRadius="6px">
+        <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="0px">
+          紙風車劇團
+        </Text>
+        <VStack
+          pt="2px"
+          align="flex-start"
+          spacing="0"
+          fontSize="sm"
+          color="#4F4F4F"
+        >
+          <Text color="white">紙風車劇團－雞城故事</Text>
+          <Text color="white">12/31(五)18:30</Text>
+          <HStack align="center" spacing="2px" color="white">
+            <Icon as={MdPlace} />
+            <Text>漁人碼頭-觀海廣場</Text>
+          </HStack>
+        </VStack>
+
+        <Flex w="100%" mt="12px">
+          <Fire02Info />
+          <Fire02Apply />
+        </Flex>
+      </Box>
+    </Flex>
+  );
+};
+
+const Fire02Info = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Button
+        colorScheme="white"
+        variant="outline"
+        border="1px solid #4f4f4f"
+        w="100%"
+        borderRadius="0"
+        onClick={onOpen}
+      >
+        簡介
+      </Button>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent bg="brand.500" color="white">
+          <ModalHeader>簡介</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Text>
+              光耀新北-1314就愛你」跨河煙火秀，今年位於淡江大橋施工構台及便道上，12月31日晚間8點22分將施放煙火13分14秒，並將表演細分為9個節目段，預計施放超過1萬發煙火彈。
+            </Text>
+            <Text>
+              爭著要當早安雞的兩大家族新生代，來到了競賽的最終舞台-淡水漁人碼頭，即將在眾人注目之下，誕生新生代的早安雞!
+            </Text>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="white" mr={3} onClick={onClose}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
+
+const Fire02Apply = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Button
+        w="100%"
+        colorScheme="black"
+        borderRadius="0"
+        onClick={onOpen}
+        bg="white"
+        color="brand.500"
+        border="1px solid white"
+      >
+        報名資訊
+      </Button>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent bg="brand.500" color="white">
+          <ModalHeader>報名資訊</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>報名方式請洽新北市文化局</ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="white" mr={3} onClick={onClose}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
+
+const Fire03 = () => {
+  return (
+    <Flex
+      w="100%"
+      direction="column"
+      h="100%"
+      border="1px solid white"
+      borderBottomLeftRadius="6px"
+      borderBottomRightRadius="6px"
+      color="white"
+    >
+      <Image src={firework03} />
+      <Box p="12px" borderBottomLeftRadius="6px" borderBottomRightRadius="6px">
+        <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="0px">
+          淡水聲光夜
+        </Text>
+        <VStack
+          pt="2px"
+          align="flex-start"
+          spacing="0"
+          fontSize="sm"
+          color="#4F4F4F"
+        >
+          <Text color="white">淡水聲光夜－親子活動</Text>
+          <Text color="white">12/31(五)</Text>
+          <HStack align="center" spacing="2px" color="white">
+            <Icon as={MdPlace} />
+            <Text>滬水一方藝文空間3F</Text>
+          </HStack>
+        </VStack>
+
+        <Flex w="100%" mt="12px">
+          <Fire03Info />
+          <Fire03Apply />
+        </Flex>
+      </Box>
+    </Flex>
+  );
+};
+
+const Fire03Info = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Button
+        colorScheme="white"
+        variant="outline"
+        border="1px solid #4f4f4f"
+        w="100%"
+        borderRadius="0"
+        onClick={onOpen}
+      >
+        簡介
+      </Button>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent bg="brand.500" color="white">
+          <ModalHeader>簡介</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Text>
+              新北市立淡水古蹟博物館舉辦親子活動，邀請民眾一起體驗淡水文化之美。
+            </Text>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="white" mr={3} onClick={onClose}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
+
+const Fire03Apply = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Button
+        w="100%"
+        colorScheme="black"
+        borderRadius="0"
+        onClick={onOpen}
+        bg="white"
+        color="brand.500"
+        border="1px solid white"
+      >
+        報名資訊
+      </Button>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent bg="brand.500" color="white">
+          <ModalHeader>報名資訊</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>報名方式請上新北市立淡水古蹟博物館官網</ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="white" mr={3} onClick={onClose}>
+              Close
+            </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

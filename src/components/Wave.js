@@ -38,7 +38,7 @@ import event01 from '../assets/images/event01.png';
 import event02 from '../assets/images/event02.png';
 import event03 from '../assets/images/event03.png';
 import event04 from '../assets/images/event04.png';
-// import event05 from '../assets/images/event05.png';
+import event05 from '../assets/images/event05.png';
 import event06 from '../assets/images/event06.png';
 import event07 from '../assets/images/event07.png';
 import event08 from '../assets/images/event08.png';
@@ -80,7 +80,7 @@ const waveArt = [
       '百年來，無數人在淡水河畔建構夢想的版圖，在這裡創造輝煌時刻。路面上，古蹟廊帶留下了時光的遺跡，而川流的淡水河從未停下來。作品像是標籤註記時光，定義2021年此時此刻的淡水與我們。',
     image: art03,
     avatar: artist03,
-    artist: '梁賴昌',
+    artist: '黃樑疑夢俱樂部',
   },
   {
     id: 'art04',
@@ -238,6 +238,7 @@ const WaveWEvents = () => {
       <WaveEvent05 />
       <WaveEvent06 />
       <WaveEvent07 />
+      <WaveEvent08 />
       <WaveEvent09 />
     </Grid>
   );
@@ -245,7 +246,7 @@ const WaveWEvents = () => {
 
 const WaveEvent01 = () => {
   return (
-    <GridItem
+    <Flex
       w="100%"
       direction="column"
       h="100%"
@@ -280,7 +281,7 @@ const WaveEvent01 = () => {
           <WaveEvent01Info />
         </Flex>
       </Box>
-    </GridItem>
+    </Flex>
   );
 };
 
@@ -366,7 +367,7 @@ const WaveEvent01Info = () => {
             </Text>
             <Link
               color="cyan.600"
-              href="https://www.facebook.com/events/238972408749093/"
+              href="https://www.tshs.ntpc.gov.tw/xceventsnews/cont?xsmsid=0G252620780150430418&sid=0L321307409890938868"
               target="_blank"
             >
               新北市立淡水古蹟博物館官網 <ExternalLinkIcon mx="2px" />
@@ -781,6 +782,140 @@ const WaveEvent05 = () => {
       borderBottomLeftRadius="6px"
       borderBottomRightRadius="6px"
     >
+      <Image src={event05} />
+      <Flex flex="1" p="12px" direction="column" justify="space-between">
+        <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="6px">
+          光映淡水抽獎活動
+        </Text>
+        <VStack
+          pt="2px"
+          pl="6px"
+          align="flex-start"
+          spacing="0"
+          fontSize="sm"
+          color="#4F4F4F"
+        >
+          <Text>12/4-1/3 線上報名</Text>
+        </VStack>
+        <Flex w="100%" mt="12px">
+          <WaveEvent05Schedule />
+          <WaveEvent05Info />
+        </Flex>
+      </Flex>
+    </Flex>
+  );
+};
+
+const WaveEvent05Schedule = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Button
+        size="sm"
+        w="40%"
+        bg="white"
+        border="1px solid #4f4f4f"
+        borderRadius="0"
+        onClick={onOpen}
+      >
+        活動簡介
+      </Button>
+      <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader bg="brand.500" color="white">
+            活動簡介
+          </ModalHeader>
+          <ModalCloseButton color="white" />
+          <ModalBody bg="brand.500" color="white">
+            <Text>響應「光映淡水抽獎活動」請至</Text>
+            <Link
+              color="cyan.600"
+              href="https://www.tshs.ntpc.gov.tw"
+              target="_blank"
+            >
+              新北市立淡水古蹟博物館官網
+              <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ModalBody>
+
+          <ModalFooter bg="brand.500" color="white">
+            <Button
+              colorScheme="white"
+              mr={3}
+              onClick={onClose}
+              borderRadius="0"
+            >
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
+
+const WaveEvent05Info = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Button
+        size="sm"
+        flex="1"
+        bg="#495460"
+        color="white"
+        borderRadius="0"
+        colorScheme="black"
+        onClick={onOpen}
+      >
+        詳細資訊和報名
+      </Button>
+      <Modal isOpen={isOpen} onClose={onClose} bg="black" color="white">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader bg="brand.500" color="white">
+            詳細資訊和報名
+          </ModalHeader>
+          <ModalCloseButton color="white" />
+          <ModalBody bg="brand.500" color="white">
+            <Text>2021/12/11(六)-2022/02/16(三) 17:00-23:00</Text>
+            <Divider my="5px" />
+            <Text>參加方式請上</Text>
+            <Link
+              color="cyan.600"
+              href="https://www.tshs.ntpc.gov.tw"
+              target="_blank"
+            >
+              新北市立淡水古蹟博物館官網
+              <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ModalBody>
+
+          <ModalFooter bg="brand.500" color="white">
+            <Button
+              colorScheme="white"
+              mr={3}
+              onClick={onClose}
+              borderRadius="0"
+            >
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
+
+const WaveEvent06 = () => {
+  return (
+    <Flex
+      w="100%"
+      direction="column"
+      border="1px solid  #f0f0f0"
+      borderBottomLeftRadius="6px"
+      borderBottomRightRadius="6px"
+    >
       <Image src={event06} />
       <Flex flex="1" p="12px" direction="column" justify="space-between">
         <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="6px">
@@ -807,7 +942,7 @@ const WaveEvent05 = () => {
   );
 };
 
-const WaveEvent05Schedule = () => {
+const WaveEvent06Schedule = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -848,7 +983,7 @@ const WaveEvent05Schedule = () => {
   );
 };
 
-const WaveEvent05Info = () => {
+const WaveEvent06Info = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -899,7 +1034,7 @@ const WaveEvent05Info = () => {
   );
 };
 
-const WaveEvent06 = () => {
+const WaveEvent07 = () => {
   return (
     <Flex
       w="100%"
@@ -934,7 +1069,7 @@ const WaveEvent06 = () => {
   );
 };
 
-const WaveEvent06Schedule = () => {
+const WaveEvent07Schedule = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -975,7 +1110,7 @@ const WaveEvent06Schedule = () => {
   );
 };
 
-const WaveEvent06Info = () => {
+const WaveEvent07Info = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -1020,7 +1155,7 @@ const WaveEvent06Info = () => {
   );
 };
 
-const WaveEvent07 = () => {
+const WaveEvent08 = () => {
   return (
     <Flex
       w="100%"
@@ -1054,7 +1189,7 @@ const WaveEvent07 = () => {
   );
 };
 
-const WaveEvent07Schedule = () => {
+const WaveEvent08Schedule = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -1096,7 +1231,7 @@ const WaveEvent07Schedule = () => {
   );
 };
 
-const WaveEvent07Info = () => {
+const WaveEvent08Info = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>

@@ -36,11 +36,11 @@ function App() {
           <Wave />
         </Element>
       </Box>
-      {/* <Box>
+      <Box>
         <Element name="firework" id="firework">
           <Firework />
         </Element>
-      </Box> */}
+      </Box>
       <Box>
         <Element name="store" id="store">
           <Store />

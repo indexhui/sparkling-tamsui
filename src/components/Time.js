@@ -105,11 +105,11 @@ function Time() {
               <VStack align="left">
                 <Heading fontSize="xl">{work.title}</Heading>
                 <Text>{work.description}</Text>
-                <Text fontSize="sm">{work.date}</Text>
-                <Text fontSize="sm">{work.place}</Text>
                 {work.imageProvided && (
                   <Text fontSize="sm">{work.imageProvided}</Text>
                 )}
+                <Text fontSize="sm">{work.date}</Text>
+                <Text fontSize="sm">{work.place}</Text>
               </VStack>
             </Flex>
           ))}

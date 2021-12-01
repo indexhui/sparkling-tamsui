@@ -172,10 +172,10 @@ const navItems = [
     label: '波光水岸',
     to: 'wave',
   },
-  // {
-  //   label: '火光十色',
-  //   to: 'firework',
-  // },
+  {
+    label: '火光十色',
+    to: 'firework',
+  },
   {
     label: '合作店家',
     to: 'store',
