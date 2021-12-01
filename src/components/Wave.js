@@ -890,7 +890,14 @@ const WaveEvent05Info = () => {
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
-            <Text>2021/12/11(六)-2022/02/16(三) 17:00-23:00</Text>
+            {/* <Text>2021/12/11(六)-2022/02/16(三) 17:00-23:00</Text> */}
+            <Text>
+              響應光映淡水，活動期間於參加抽獎活動，就有機會獲得Dyson吹風機、CARSCAM折疊迷你電動車、Swtich、Apple
+              Watch SE、雀巢膠囊咖啡機、BRUNO電烤盤等多項好禮。
+            </Text>
+            <Text fontSize="sm">
+              ＊主辦單位保有所有相關活動最終解釋權及活動更改之權利。
+            </Text>
             <Divider my="5px" />
             <Text>參加方式請上</Text>
             <Link
@@ -976,7 +983,7 @@ const WaveEvent06Schedule = () => {
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
-            邀請國內知名表演團隊身聲劇場與頑書趣工作室進行展演。透過光影劇場活動，結合多元表演形式，呈現簡單又深刻的生命議題，促進親子的思考與討論，並且達到藝術扎根之目的。
+            影劇場邀請國內知名表演團隊影子傳奇劇團、學校汐止東山國小與樹人家商進行光影相關劇目的演出，透過多元表演形式加上創新手法，結合教育和表演兩大元素，讓不同年齡層觀眾都能產生共鳴，進而達到藝術扎根與文化傳承。
           </ModalBody>
 
           <ModalFooter bg="brand.500" color="white">
@@ -1020,11 +1027,11 @@ const WaveEvent06Info = () => {
           <ModalBody bg="brand.500" color="white">
             <Text>12/12(日)</Text>
             <HStack>
-              <Text w="92px">13:00-14:00</Text>
+              <Text w="100px">13:00-14:00</Text>
               <Text>光劇場 身聲劇場</Text>
             </HStack>
             <HStack>
-              <Text w="92px">19:00-20:00</Text>
+              <Text w="100px">19:00-20:00</Text>
               <Text>光劇場 頑書趣工作室</Text>
             </HStack>
             <Divider my="5px" />
@@ -1078,7 +1085,7 @@ const WaveEvent07 = () => {
         >
           <Text>12/12(日) 18:30 52赫茲我愛你</Text>
           <Text>12/19(日) 18:30 冰雪奇緣</Text>
-          <Text>淡水海關碼頭 棟倉庫</Text>
+          <Text>淡水海關碼頭 B棟倉庫</Text>
         </VStack>
         <Flex w="100%" mt="12px">
           <WaveEvent07Schedule />

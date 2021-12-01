@@ -246,12 +246,14 @@ const Fire02Info = () => {
           <ModalHeader>簡介</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text>
+            雞頭城裡總是互不相讓的「麥可雞」和「肯特雞」家族，為了爭奪早安雞的頭銜相互較勁，使出渾身解數展現自己。
+            爭著要當早安雞的兩大家族新生代，來到了競賽的最終舞台-淡水漁人碼頭，即將在眾人注目之下，誕生新生代的早安雞！
+            {/* <Text>
               光耀新北-1314就愛你」跨河煙火秀，今年位於淡江大橋施工構台及便道上，12月31日晚間8點22分將施放煙火13分14秒，並將表演細分為9個節目段，預計施放超過1萬發煙火彈。
             </Text>
             <Text>
               爭著要當早安雞的兩大家族新生代，來到了競賽的最終舞台-淡水漁人碼頭，即將在眾人注目之下，誕生新生代的早安雞!
-            </Text>
+            </Text> */}
           </ModalBody>
 
           <ModalFooter>
@@ -395,7 +397,7 @@ const Fire03Apply = () => {
       >
         報名資訊
       </Button>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} scrollBehavior="inside">
         <ModalOverlay />
         <ModalContent bg="brand.500" color="white">
           <ModalHeader>報名資訊</ModalHeader>
@@ -421,6 +423,50 @@ const Fire03Apply = () => {
               參與人數：
             </Text>
             <Text>每場次活動名額上限25位，3場次共計75位。</Text>
+            <Text fontSize="lg" mt="8px">
+              報名方式：
+            </Text>
+            <Text>
+              免費線上報名（凡報名並全程參與者，將可獲得浪漫小禮物一份）。
+            </Text>
+            <Text fontSize="lg" mt="8px">
+              ｜古蹟親子活動｜
+            </Text>
+            <Text>時間：110年12月31日（五）15:00-18:00</Text>
+            <Text>地點：滬水一方藝文空間3樓</Text>
+            <Text fontSize="lg" mt="8px">
+              內容：
+            </Text>
+            <Text>15:00-18:00好物交換趣</Text>
+            <Text>
+              整理自己已不需要的二手玩具或是二手書籍，前來和其他小朋友互相交換，幫助玩具與二手書找到愛惜它的新主人。
+            </Text>
+            <Text>15:00-18:00益智積木好好玩</Text>
+            <Text>
+              開放小朋友最愛的積木體驗桌，一起動手玩積木，激發無限創造力。
+            </Text>
+            <Text>15:00-18:00滬尾守衛戰</Text>
+            <Text>
+              遊戲以虛擬互動方式，搭配實體道具的使用，增加孩童體驗時的回饋感受，創造出小朋友的參與感及榮譽感。
+            </Text>
+            <Text>15:00-16:00拆解玩具工作坊</Text>
+            <Text>
+              藉由拆解玩具訓練小朋友手眼協調能力外，還能讓小朋友瞭解損壞玩具被丟棄很可惜，可將拆解下來的玩具零件分類回收或留下可用的部分作為其他玩具的維修零件。
+            </Text>
+            <Text>16:00-17:00玩具小醫生</Text>
+            <Text>
+              玩具醫生來到淡水進行玩具檢修，免費為你心愛的玩具義診！每人限帶一個玩具，請挑選你最希望能修好並想繼續玩的玩具來找玩具醫生。
+            </Text>
+            <Text>17:00-18:00親子繪本共讀</Text>
+            <Text>
+              與知名繪本及說故事老師粘忘凡合作，導讀本館出版《忙個不停的紅城堡》或《海上只剩下船》，以生動活潑的方式帶動小朋友快樂學習的氛圍。
+            </Text>
+            <Text fontSize="lg" mt="8px">
+              ｜情人VIP煙火夜｜
+            </Text>
+            <Text>時間：20:00～20:35</Text>
+            <Text>地點：滬水一方3樓</Text>
+            <Text>組數：10組情人，共20人，採抽獎方式</Text>
             {/* 報名方式請上
             <Link
               color="cyan.600"
