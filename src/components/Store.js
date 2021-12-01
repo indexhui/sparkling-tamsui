@@ -252,7 +252,7 @@ const Shop = props => {
       <Image
         w={{ base: '100px', md: '300px' }}
         // h={{ base: '', md: '150px' }}
-        minH={{ base: '', md: '300px' }}
+        minH={{ base: '10px', md: '300px' }}
         objectFit="cover"
         src={props.image}
         borderTopLeftRadius="32px"
