@@ -458,7 +458,7 @@ const WaveEvent02Schedule = () => {
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
-            以淡水重要古蹟景點與山川壯麗為主軸，以淡水的日出日落不同時間點的潮汐變化作為引言，透過多媒體互動遊戲、3D場景、投影沉浸劇場及情境休憩布置等，引導民眾認識淡水不同時段的美景。
+            以淡水重要古蹟景點與山川壯麗為主軸，將淡水左岸與右岸的四季景色、特色花朵及動植物作為引言，透過多媒體互動遊戲、3D場景、投影沉浸劇場及情境休憩布置等，呈現光影互動、淡水山河絕美景色與人文景觀交織之美，邀您一起來欣賞淡水不同時節的美景。
           </ModalBody>
 
           <ModalFooter bg="brand.500" color="white">
@@ -983,7 +983,7 @@ const WaveEvent06Schedule = () => {
           </ModalHeader>
           <ModalCloseButton color="white" />
           <ModalBody bg="brand.500" color="white">
-            影劇場邀請國內知名表演團隊影子傳奇劇團、學校汐止東山國小與樹人家商進行光影相關劇目的演出，透過多元表演形式加上創新手法，結合教育和表演兩大元素，讓不同年齡層觀眾都能產生共鳴，進而達到藝術扎根與文化傳承。
+            光劇場邀請國內知名表演團隊身聲劇場與頑書趣工作室，影劇場邀請影子傳奇劇團、學校汐止東山國小與樹人家商進行展演，透過光影劇場活動，結合多元表演形式及創新手法，不僅呈現簡單又深刻的生命議題，亦融入親子與教育元素，讓不同年齡層觀眾都能產生共鳴，並且達到藝術扎根之目的。
           </ModalBody>
 
           <ModalFooter bg="brand.500" color="white">
@@ -1027,11 +1027,11 @@ const WaveEvent06Info = () => {
           <ModalBody bg="brand.500" color="white">
             <Text>12/12(日)</Text>
             <HStack>
-              <Text w="100px">13:00-14:00</Text>
+              <Text w="120px">13:00-14:00</Text>
               <Text>光劇場 身聲劇場</Text>
             </HStack>
             <HStack>
-              <Text w="100px">19:00-20:00</Text>
+              <Text w="120px">19:00-20:00</Text>
               <Text>光劇場 頑書趣工作室</Text>
             </HStack>
             <Divider my="5px" />

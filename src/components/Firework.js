@@ -88,7 +88,7 @@ const Fire01 = () => {
           <Text color="white">12/31(五)20:22</Text>
           <HStack align="center" spacing="2px" color="white">
             <Icon as={MdPlace} />
-            <Text>淡水古蹟博物館</Text>
+            <Text>淡水漁人碼頭</Text>
           </HStack>
         </VStack>
 
@@ -213,7 +213,7 @@ const Fire02 = () => {
           <Text color="white">12/31(五)18:30</Text>
           <HStack align="center" spacing="2px" color="white">
             <Icon as={MdPlace} />
-            <Text>漁人碼頭-觀海廣場</Text>
+            <Text>淡水漁人碼頭-觀海廣場</Text>
           </HStack>
         </VStack>
 
@@ -331,10 +331,10 @@ const Fire03 = () => {
           color="#4F4F4F"
         >
           <Text color="white">12/31(五)</Text>
-          {/* <HStack align="center" spacing="2px" color="white">
+          <HStack align="center" spacing="2px" color="white">
             <Icon as={MdPlace} />
-            <Text>滬水一方藝文空間3F</Text>
-          </HStack> */}
+            <Text>滬水一方藝文空間</Text>
+          </HStack>
         </VStack>
 
         <Flex w="100%" mt="12px">
@@ -417,7 +417,7 @@ const Fire03Apply = () => {
               路線：
             </Text>
             <Text>
-              福佑宮（對面廣場集合）→重建街（戀愛巷）→淡水日本警官宿舍→淡水木下靜涯舊居→陳澄波戶外美術館→小白宮→真理街→淡水海關碼頭。
+              福佑宮（對面廣場集合）→重建街（戀愛巷）→日本警官宿舍→木下靜涯舊居→陳澄波戶外美術館→金色水岸榕堤段→小白宮→真理街→海關碼頭
             </Text>
             <Text fontSize="lg" mt="8px">
               參與人數：
@@ -427,7 +427,7 @@ const Fire03Apply = () => {
               報名方式：
             </Text>
             <Text>
-              免費線上報名（凡報名並全程參與者，將可獲得浪漫小禮物一份）。
+              線上報名，每人酌收報名費200元（不限年齡，費用含小白宮免費入館）
             </Text>
             <Text fontSize="lg" mt="8px">
               ｜古蹟親子活動｜
