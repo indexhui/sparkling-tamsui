@@ -41,7 +41,7 @@ export default function Navbar() {
       zIndex="20"
       position="fixed"
     >
-      <Flex w="1080px" justify="space-between" align="center">
+      <Flex w="80%" maxW="1080px" justify="space-between" align="center">
         <Fade in={!isActive}>
           <Link
             spy={true}

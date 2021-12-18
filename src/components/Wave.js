@@ -902,10 +902,10 @@ const WaveEvent05Info = () => {
             <Text>參加方式請上</Text>
             <Link
               color="cyan.600"
-              href="https://www.tshs.ntpc.gov.tw"
+              href="https://www.facebook.com/182179945131454/photos/a.878035758879199/5361688307180566"
               target="_blank"
             >
-              新北市立淡水古蹟博物館官網
+              淡水古蹟博物館粉絲專頁
               <ExternalLinkIcon mx="2px" />
             </Link>
           </ModalBody>

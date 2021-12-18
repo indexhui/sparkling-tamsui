@@ -287,7 +287,10 @@ const Fire02Apply = () => {
         <ModalContent bg="brand.500" color="white">
           <ModalHeader>報名資訊</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>報名方式請洽新北市文化局</ModalBody>
+          <ModalBody>
+            <Text>本活動採自由入場。</Text>
+            <Text>活動資訊請洽：新北市政府文化局 （02）29509750 分機103</Text>
+          </ModalBody>
 
           <ModalFooter>
             <Button colorScheme="white" mr={3} onClick={onClose}>
@@ -321,7 +324,7 @@ const Fire03 = () => {
         borderBottomRightRadius="6px"
       >
         <Text fontSize={{ base: 'lg', md: 'xl' }} my="4px" px="0px">
-          淡水聲光夜系列活動
+          古蹟輕旅行─浪漫系列
         </Text>
         <VStack
           pt="2px"
@@ -417,7 +420,7 @@ const Fire03Apply = () => {
               路線：
             </Text>
             <Text>
-              福佑宮（對面廣場集合）→重建街（戀愛巷）→日本警官宿舍→木下靜涯舊居→陳澄波戶外美術館→金色水岸榕堤段→小白宮→真理街→海關碼頭
+              福佑宮（對面廣場集合）→重建街（戀愛巷）→淡水日本警官宿舍→淡水木下靜涯舊居→陳澄波戶外美術館→金色水岸榕堤段→小白宮→真理街→淡水海關碼頭。
             </Text>
             <Text fontSize="lg" mt="8px">
               參與人數：
@@ -451,6 +454,7 @@ const Fire03Apply = () => {
             </Text>
             <Text>15:00-16:00拆解玩具工作坊</Text>
             <Text>
+              與新北市玩具銀行合作，
               藉由拆解玩具訓練小朋友手眼協調能力外，還能讓小朋友瞭解損壞玩具被丟棄很可惜，可將拆解下來的玩具零件分類回收或留下可用的部分作為其他玩具的維修零件。
             </Text>
             <Text>16:00-17:00玩具小醫生</Text>
@@ -459,7 +463,7 @@ const Fire03Apply = () => {
             </Text>
             <Text>17:00-18:00親子繪本共讀</Text>
             <Text>
-              與知名繪本及說故事老師粘忘凡合作，導讀本館出版《忙個不停的紅城堡》或《海上只剩下船》，以生動活潑的方式帶動小朋友快樂學習的氛圍。
+              與知名繪本及說故事老師粘忘凡合作，導讀本館出版《海上只剩下船》，以生動活潑的方式帶動小朋友快樂學習的氛圍。
             </Text>
             <Text fontSize="lg" mt="8px">
               ｜情人VIP煙火夜｜

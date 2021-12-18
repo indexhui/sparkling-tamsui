@@ -71,13 +71,30 @@ function Intro() {
               </GridItem>
             ))}
           </Grid>
-          <AspectRatio w="75%" ratio={2 / 1}>
-            <iframe
-              title="tamsui"
-              src="https://www.youtube.com/embed/NwmxVeOhqkk"
-              allowFullScreen
-            />
-          </AspectRatio>
+          <Grid
+            w="100%"
+            gap={12}
+            templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
+          >
+            <GridItem colSpan={1}>
+              <AspectRatio w="100%" ratio={2 / 1}>
+                <iframe
+                  title="tamsui"
+                  src="https://www.youtube.com/embed/NwmxVeOhqkk"
+                  allowFullScreen
+                />
+              </AspectRatio>
+            </GridItem>
+            <GridItem colSpan={1}>
+              <AspectRatio ratio={2 / 1}>
+                <iframe
+                  title="wave"
+                  src="https://www.youtube.com/embed/dXTL5ZBigWs"
+                  allowFullScreen
+                />
+              </AspectRatio>
+            </GridItem>
+          </Grid>
         </VStack>
       </Flex>
     </Flex>
